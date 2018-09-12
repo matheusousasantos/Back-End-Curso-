@@ -3,7 +3,7 @@
 	define('HOST','localhost');
 	define('DB','modulo_08/2');
 	define('USER','root');
-	define('PASS','ddsdsd');
+	define('PASS','');
 
 	try{
 	$pdo = new PDO('mysql:host='.HOST.';dbname='.DB,USER,PASS,array(PDO::
