@@ -1,12 +1,22 @@
 <?php
 	
 	$pdo = new PDO('mysql:host = localhost; dbname=modulo_08/2', 'root', '');
+	/*
+	$tabelas = $pdo->query("SHOW TABLES");
 
-	$sql = $pdo->prepare("SELECT * FROM clientes GROUP BY cargo");
+	$tabelas = $tabelas->fetchAll();
 
-	$sql->execute();
 	echo '<pre>';
-	print_r($sql->fetchAll());
+	print_r($tabelas);
 	echo '</pre>';
+	*/
+
+	$sql = 'CREATE TABLE cursos(
+	id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+	nome_curo VARCHAR(255) NOT NULL
+	)';
+
+	$pdo->exec($sql);
+
 ?>
 
